@@ -1,6 +1,6 @@
 #include HEADER
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int main(void)
@@ -11,11 +11,7 @@ int main(void)
     compute_pi_baseline(50000000);
 #elif defined(MATRIX)
     static int array[10000][10000] = {0};
-    matrix(10000,10000,array);
-
+    matrix(10000, 10000, array);
 #endif
     return 0;
-
 }
-
-
