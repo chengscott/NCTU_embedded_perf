@@ -13,12 +13,12 @@ $(GIT_HOOKS):
 SRCS_common = main.c
 
 pi: $(SRCS_common) pi.c
-	$(CC) $(CFLAGS_common) \
+	$(CC) $(CFLAGS_common) $(CFLAGS) \
 		-o $@ -DPI -DHEADER="\"$@.h\"" \
 		$(SRCS_common) $@.c
 
 matrix: $(SRCS_common) matrix.c
-	$(CC) $(CFLAGS_common) \
+	$(CC) $(CFLAGS_common) $(CFLAGS) \
 		-o $@ -DMATRIX -DHEADER="\"$@.h\"" \
 		$(SRCS_common) $@.c
 
