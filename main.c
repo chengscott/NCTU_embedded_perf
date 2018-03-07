@@ -19,7 +19,7 @@ int main(void)
     matrix(10000, 10000, array);
 #elif defined(BRANCH)
     for (size_t i = 0; i < size; ++i)
-        lhs[i] = i, rhs[i] = i + (i & 1);
+        lhs[i] = 31 * i + rand() % 31, rhs[i] = 31 * i + rand() % 31;
     merge(lhs, rhs, res, size);
 #endif
     return 0;

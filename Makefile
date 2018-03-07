@@ -34,7 +34,7 @@ cache-test: $(EXEC)
 
 branch-test: $(EXEC)
 	perf stat --repeat 5 \
-		-e branch-misses,branches \
+		-e branch-misses:u,branches:u \
 		./branch
 
 plot: output.txt
